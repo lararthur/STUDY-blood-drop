@@ -8,7 +8,7 @@ let cursorY = 0
 let mouseIsOnHold = false
 let willMove = false
 
-window.onload = function () {
+windowEl.onload = function () {
     setInterval(function () {
         willMove = true
     }, 100)
@@ -25,7 +25,7 @@ const getMousePosition = (e) => {
     console.log("X coords: " + cursorX + ", Y coords: " + cursorY)
 }
 
-window.addEventListener('touchstart', function (e) {
+windowEl.addEventListener('touchstart', function (e) {
     mouseIsOnHold = true
 
     bDrop.classList.add("fullBDrop")
@@ -33,7 +33,7 @@ window.addEventListener('touchstart', function (e) {
     getMousePosition(e)
 })
 
-window.addEventListener('touchmove', function (e) {
+windowEl.addEventListener('touchmove', function (e) {
 
     if (willMove) {
         mouseIsOnHold && getMousePosition(e)
@@ -41,7 +41,7 @@ window.addEventListener('touchmove', function (e) {
     }
 })
 
-window.addEventListener('touchend', function () {
+windowEl.addEventListener('touchend', function () {
     mouseIsOnHold = false
 
     bDrop.style.left = (cursorX - 5) + 'px'
