@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: #666;
+}
+
+.bDrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: red;
+    border-radius: 50%;
+    transition: left 0.3s ease, top 0.3s ease, width 2s ease-out, height 2s ease-out;
+}
+
+.fullBDrop {
+    width: 50px;
+    height: 50px;
+}
